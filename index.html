@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header id="navbar">
+        <div class="container">
+            <a href="#" class="logo"><img src="logo.png" alt="Your Logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Game</a></li>
+                    <li><a href="#">Characters</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="splash-screen" id="splash-screen">Blizzard Entertainment</div>
+    <div class="full-page" id="main-content">
+        <video autoplay muted loop class="video-background">
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+        <div id="animated-text"></div>
+    </div>
+    <div class="scroll-section">
+        <div class="image-overlay">
+            <h1>What is Overwatch?</h1>
+            <p>Overwatch was released in 2016, and Overwatch 2 was released in 2022. Both games feature hero-based combat between two teams of players vying over various objectives, along with other traditional gameplay modes. Released in 2016, the first video game in the series lacked a traditional story mode.</p>
+        </div>
+        <img id="bottom-image" src="map.png" alt="Bottom Image">
+    </div>
+   <!-- Filler Section -->
+<div class="new-section">
+    <div class="container">
+        <h2 class="section-heading">UNLEASH YOUR INNER POTENTIAL</h2>
+        <h3 class="section-subheading">Join forces with allies, strategize, and experience the thrilling new content in Overwatch</h3>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="image1.jpg" alt="Image 1">
+                <div class="image-text">
+                    <h3>Image Title 1</h3>
+                    <p>Subheading for image 1</p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="image2.jpg" alt="Image 2">
+                <div class="image-text">
+                    <h3>Image Title 2</h3>
+                    <p>Subheading for image 2</p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="image3.jpg" alt="Image 3">
+                <div class="image-text">
+                    <h3>Image Title 3</h3>
+                    <p>Subheading for image 3</p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="image-text">
+                    <h3>Image Title 4</h3>
+                    <p>Subheading for image 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Story Section-->
+    <div class="section-with-image" style="background-image: url('image41.png');">
+        <div class="section-content">
+            <h2>Story</h2>
+            <div class="subheading">
+                <h3 id="story-title">Overwatch</h3>
+                <div class="arrows">
+                    <span id="left-arrow">&#9664;</span>
+                    <span id="right-arrow">&#9654;</span>
+                </div>
+            </div>
+            <p id="story-description">This is a short description of the Overwatch story. You can add more details about the storyline here.</p>
+            <div class="story-images" id="story-images">
+                <img src="story1.jpg" alt="Story Image 1">
+                <img src="story2.jpg" alt="Story Image 2">
+                <img src="story3.jpg" alt="Story Image 3">
+                <img src="story4.jpg" alt="Story Image 4">
+            </div>
+        </div>
+    </div>
+    <!-- News Section -->
+    <div class="news-section">
+        <div class="container">
+            <h2 class="featured-news-heading">Featured News</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <a href="link1.html">
+                        <img src="image31.webp" alt="News Image 1">
+                        <div class="news-info">
+                            <h3>News Title 1</h3>
+                            <p>Subheading or summary for news item 1</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="link2.html">
+                        <img src="image32.png" alt="News Image 2">
+                        <div class="news-info">
+                            <h3>News Title 2</h3>
+                            <p>Subheading or summary for news item 2</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="link3.html">
+                        <img src="image33.png" alt="News Image 3">
+                        <div class="news-info">
+                            <h3>News Title 3</h3>
+                            <p>Subheading or summary for news item 3</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Characters Section -->
+    <div class="characters-section">
+        <div class="container">
+            <div class="text-content">
+                <h3>Choose Your</h3>
+                <h1>Roles</h1>
+                <p>Overwatch features a diverse cast of heroes, each with unique abilities and playstyles. Choose your role to help your team achieve victory.</p>
+                <button onclick="window.location.href='characters.html'">View All Characters</button>
+                <div class="roles">
+                    <button id="damage-button" onclick="showCharacter('damage')">Damage</button>
+                    <button id="tank-button" onclick="showCharacter('tank')">Tank</button>
+                    <button id="support-button" onclick="showCharacter('support')">Support</button>
+                </div>                
+            </div>
+            <div class="image-content">
+                <img id="character-image" src="damage.png" alt="Character Image">
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
