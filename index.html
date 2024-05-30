@@ -14,8 +14,8 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Game</a></li>
-                    <li><a href="#">Characters</a></li>
+                    <li><a href="game.html">Game</a></li>
+                    <li><a href="characters.html">Characters</a></li>
                     <li><a href="#">Story</a></li>
                     <li><a href="#">News</a></li>
                 </ul>
@@ -37,42 +37,80 @@
         <img id="bottom-image" src="map.png" alt="Bottom Image">
     </div>
    <!-- Filler Section -->
-<div class="new-section">
+   <div class="new-section">
     <div class="container">
         <h2 class="section-heading">UNLEASH YOUR INNER POTENTIAL</h2>
         <h3 class="section-subheading">Join forces with allies, strategize, and experience the thrilling new content in Overwatch</h3>
         <div class="image-grid">
             <div class="image-item">
-                <img src="image1.jpg" alt="Image 1">
+                <img src="filler1.jpg" alt="Image 1">
                 <div class="image-text">
-                    <h3>Image Title 1</h3>
-                    <p>Subheading for image 1</p>
+                    <h3>Hero-based Gameplay</h3>
+                    <p>Features a diverse roster of heroes, each with unique abilities, classified into Damage, Tank, and Support roles.</p>
                 </div>
             </div>
             <div class="image-item">
-                <img src="image2.jpg" alt="Image 2">
+                <img src="filler2.jpg" alt="Image 2">
                 <div class="image-text">
-                    <h3>Image Title 2</h3>
-                    <p>Subheading for image 2</p>
+                    <h3>Team-oriented Objectives</h3>
+                    <p>Emphasizes cooperation to complete objectives like capturing points or escorting payloads.</p>
                 </div>
             </div>
             <div class="image-item">
-                <img src="image3.jpg" alt="Image 3">
+                <img src="OW2_Dorado_3.webp" alt="Image 3">
                 <div class="image-text">
-                    <h3>Image Title 3</h3>
-                    <p>Subheading for image 3</p>
+                    <h3>Dynamic Maps</h3>
+                    <p>Offers a variety of global locations with unique layouts, encouraging different strategies and hero choices.</p>
                 </div>
             </div>
             <div class="image-item">
-                <img src="image4.jpg" alt="Image 4">
+                <img src="overwatch1.jpg" alt="Image 4">
                 <div class="image-text">
-                    <h3>Image Title 4</h3>
-                    <p>Subheading for image 4</p>
+                    <h3>Stylized Art and Storytelling</h3>
+                    <p>Known for its vibrant art style and engaging lore explored through animated shorts and comics.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+    <!-- Characters Section -->
+    <div class="characters-section">
+        <div class="container">
+            <div class="text-content">
+                <h3>Choose Your</h3>
+                <h1>Roles</h1>
+                <p>Overwatch features a diverse cast of heroes, each with unique abilities and playstyles. Choose your role to help your team achieve victory.</p>
+                <button onclick="window.location.href='characters.html'">View All Characters</button>
+                <div class="roles">
+                    <button id="damage-button" onclick="showCharacter('damage')">Damage</button>
+                    <button id="tank-button" onclick="showCharacter('tank')">Tank</button>
+                    <button id="support-button" onclick="showCharacter('support')">Support</button>
+                </div>                
+            </div>
+            <div class="image-content">
+                <img id="character-image" src="damage.png" alt="Character Image">
+            </div>
+        </div>
+    </div>
+    
+<div class="diagonal-container">
+    <div class="video-wrapper">
+        <video autoplay loop muted>
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="diagonal-divider"></div>
+    <div class="video-wrapper">
+        <video autoplay loop muted>
+            <source src="video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+
     <!-- Story Section-->
     <div class="section-with-image" style="background-image: url('image41.png');">
         <div class="section-content">
@@ -128,25 +166,66 @@
             </div>
         </div>
     </div>
-    <!-- Characters Section -->
-    <div class="characters-section">
-        <div class="container">
-            <div class="text-content">
-                <h3>Choose Your</h3>
-                <h1>Roles</h1>
-                <p>Overwatch features a diverse cast of heroes, each with unique abilities and playstyles. Choose your role to help your team achieve victory.</p>
-                <button onclick="window.location.href='characters.html'">View All Characters</button>
-                <div class="roles">
-                    <button id="damage-button" onclick="showCharacter('damage')">Damage</button>
-                    <button id="tank-button" onclick="showCharacter('tank')">Tank</button>
-                    <button id="support-button" onclick="showCharacter('support')">Support</button>
-                </div>                
+    
+    <section id="reviews">
+        <h2>Game Review</h2>
+        <p id="user-count">23,315,464+ Users Playing Overwatch</p>
+        <div class="review-slider">
+            <div class="review-container">
+                <div class="review active" id="review1">
+                    <img src="logo1.png" alt="Gamer Logo">
+                    <div class="review-content">
+                        <h3 class="gamer-name">Gamer Name 1</h3>
+                        <p class="occupation">YouTube</p>
+                        <p class="description">Overwatch is an amazing game with dynamic gameplay and stunning graphics. I love streaming it!</p>
+                    </div>
+                </div>
+                <div class="review" id="review2">
+                    <img src="logo2.png" alt="Gamer Logo">
+                    <div class="review-content">
+                        <h3 class="gamer-name">Gamer Name 2</h3>
+                        <p class="occupation">Twitch Streamer</p>
+                        <p class="description">The community and the competitive nature of Overwatch make it a must-play for any serious gamer.</p>
+                    </div>
+                </div>
+                <div class="review" id="review3">
+                    <img src="logo3.png" alt="Gamer Logo">
+                    <div class="review-content">
+                        <h3 class="gamer-name">Gamer Name 3</h3>
+                        <p class="occupation">Professional Gamer</p>
+                        <p class="description">Overwatch has been a staple in the eSports scene for years. It's challenging and rewarding.</p>
+                    </div>
+                </div>
             </div>
-            <div class="image-content">
-                <img id="character-image" src="damage.png" alt="Character Image">
+            <div class="nav-buttons">
+                <button class="nav-button" id="prev-button">❮</button>
+                <button class="nav-button" id="next-button">❯</button>
             </div>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="blizz.png" alt="Blizzard Logo">
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/blizzard/?hl=en" target="_blank"><img src=".png" alt="Instagram"></a>
+                <a href="https://twitter.com/blizzard_ent" target="_blank"><img src=".png" alt="Twitter"></a>
+                <!-- Add more social links here -->
+            </div>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-trademark">
+                <p>© 2024 Blizzard Entertainment, Inc. All rights reserved. All trademarks referenced herein are the properties of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js" defer></script>
 </body>
 </html>
