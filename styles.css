@@ -1,0 +1,608 @@
+@font-face {
+    font-family: 'Overwatch Regular';
+    src: url('OVERWATCH.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'B Wrath';
+    src: url('B_WRATH.TTF') format('truetype');
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Ensure vertical scrolling is allowed */
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #282c34;
+    color: #eff8fa;
+}
+
+header {
+    background: none; /* Transparent background */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust the height as needed */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: #ff4500; /* Fire orange color */
+    font-size: 3em;
+    z-index: 10;
+    transition: opacity 1s ease, visibility 1s ease;
+    font-family: 'B Wrath', sans-serif; /* Apply the new font */
+    text-shadow: 2px 2px 5px #808080; /* Grey highlight */
+}
+
+.splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.full-page, .scroll-section {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.full-page {
+    z-index: 1;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#animated-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'Overwatch Regular', Arial, sans-serif;
+    font-size: 80px;
+    color: #333;
+    text-shadow: 1px 1px 2px #ccc, -1px -1px 2px #ccc, 1px -1px 2px #ccc, -1px 1px 2px #ccc; /* Light grey outlines */
+    z-index: 1;
+}
+
+.char {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.scroll-section {
+    text-align: center;
+    background-color: #222;
+    position: relative; /* Added position relative */
+}
+
+#bottom-image {
+    max-width: 100%;
+    height: auto;
+    opacity: 0; /* Initial opacity set to 0 */
+    transition: opacity 1s ease; /* Smooth fade-in transition */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%;
+}
+
+.image-overlay h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.image-overlay p {
+    font-size: 16px;
+}
+
+.solid {
+    background-color: rgba(51, 51, 51, 1); /* Solid background */
+}
+
+.section-with-image {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ensure the section covers the entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Text color for content in the section */
+}
+
+.section-content {
+    text-align: center;
+}
+
+.news-section {
+    padding: 50px 0;
+    background-color: #333; /* Background color for news section */
+}
+
+.featured-news-heading {
+    font-size: 36px;
+    color: #ffcc00; /* Featured news heading color */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.news-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.news-item {
+    flex: 1;
+    background-color: #444; /* Background color for each news item */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-info {
+    padding: 15px;
+    color: #fff;
+}
+
+.news-info h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.news-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.characters-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #222; /* Background color for characters section */
+}
+
+.text-content {
+    width: 50%;
+}
+
+.text-content h3 {
+    font-size: 24px;
+    color: #ffcc00; /* Subheading color */
+}
+
+.text-content h1 {
+    font-size: 48px;
+    color: #fff; /* Main heading color */
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #ccc; /* Slight description color */
+    margin-bottom: 20px;
+}
+
+.text-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff4500; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text-content button:hover {
+    background-color: #ffcc00; /* Hover color for button */
+}
+
+.roles {
+    margin-top: 20px;
+}
+
+.roles button {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #444; /* Role button color */
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.roles button:hover {
+    background-color: #ff4500; /* Hover color for role buttons */
+}
+
+.image-content {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-content img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.section-with-image {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ensure the section covers the entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Text color for content in the section */
+    padding: 20px; /* Add some padding */
+}
+
+.section-content {
+    text-align: center;
+}
+
+.section-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add some space between the subheading and arrows */
+}
+
+.subheading h3 {
+    font-size: 24px;
+}
+
+.subheading .arrows span {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.story-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add space between images */
+    margin-top: 20px; /* Add some margin above the images */
+}
+
+.story-images img {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.story-images img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+    
+.new-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #222;
+}
+
+.new-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-section .section-heading {
+    font-size: 36px;
+    color: #ffcc00; /* Heading color */
+    margin-bottom: 20px;
+}
+
+.new-section .section-subheading {
+    font-size: 24px;
+    color: #fff; /* Subheading color */
+    margin-bottom: 20px;
+}
+
+.new-section .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.new-section .image-item {
+    flex: 0 0 calc(25% - 80px);
+    position: relative;
+    text-align: center; /* Center-align the image and text */
+}
+
+.new-section .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.new-section .image-text {
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.new-section .image-text h3 {
+    font-size: 20px;
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+
+.new-section .image-text p {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.diagonal-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-wrapper {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.diagonal-divider {
+    width: 0;
+    height: 100%;
+    border-left: 2px solid #fff; /* Adjust the thickness and color of the diagonal divider */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) skew(45deg);
+    z-index: 1;
+}
+
+/* Footer Section */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin: 0 10px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-trademark {
+    font-size: 0.8em;
+}
+
+#reviews {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #222;
+}
+
+#reviews h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#user-count {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.review-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.review-container {
+    display: flex;
+    justify-content: space-around;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review {
+    flex: 0 0 30%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: left;
+    background-color: #222;
+    border: 2px solid transparent;
+    transition: border 0.3s ease, filter 0.3s ease;
+    filter: blur(2px);
+    opacity: 0.5;
+}
+
+.review.active {
+    border-color: #ffcc00;
+    filter: blur(0);
+    opacity: 1;
+}
+
+.review img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.review-content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.gamer-name {
+    margin: 0;
+    color: #ffcc00;
+}
+
+.occupation {
+    margin: 5px 0 10px 0;
+    font-weight: bold;
+}
+
+.description {
+    margin: 5px 0;
+}
+
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.nav-button {
+    background-color: #ffcc00;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+.nav-button:hover {
+    background-color: #222;
+}
+
+
