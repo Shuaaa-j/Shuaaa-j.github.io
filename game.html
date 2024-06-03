@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="game.js" defer></script>
+  <title>OVERWATCH - GAME</title>
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Include Rubik font -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,900&display=swap" rel="stylesheet" />
+  <!-- Include Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/647e72c37a.js" crossorigin="anonymous"></script>
+  <!-- Link to external CSS file -->
+  <link href="game.css" rel="stylesheet" />
+  <!-- Internal style -->
+  <style>
+  </style>
+</head>
+<body>
+  <!-- Parallax effect container -->
+  <div class="parallax">
+    <!-- Primary header section -->
+    <header class="primary-header">
+      <div class="wrapper">
+        <!-- Logo -->
+        <div class="primary-header__inner">
+          <div class="logo">
+            <img src="img/Logo.webp" alt="Logo" />
+          </div>
+          <!-- Navigation Bar -->
+          <nav class="primary-nav">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="game.html">GAME</a></li>
+              <li><a href="characters.html">CHARACTERS</a></li>
+              <li><a href="cinematics.html">CINEMATICS</a></li>
+              <li><a href="news.html">NEWS</a></li>
+              <li><a href="https://us.shop.battle.net/en-us/product/overwatch">DOWNLOAD</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Hero section -->
+    <div class="hero" id="initial-hero">
+      <div class="wrapper">
+        <!-- Hero title -->
+        <h1 class="hero__title">
+          <span>OVERWATCH</span> MAPS & GAMEMODE
+        </h1>
+        <!-- Scroll down button -->
+        <button class="button">Scroll down!</button>
+      </div>
+    </div>
+    
+    <!-- Draggable background images -->
+    <div class="draggable-bg">
+      <img class="parallax__bg" src="img/bg1.jpg" alt="Background 1" />
+      <img class="parallax__bg" src="img/vackground22.png" alt="Background 2" />
+      <img class="parallax__bg" src="img/bg3.jpg" alt="Background 3" />
+      <img class="parallax__bg" src="img/bg4.jpg" alt="Background 4" />
+      <img class="parallax__bg" src="img/bg5.jpg" alt="Background 5" />
+    </div>
+
+    <!-- Scroll right button -->
+    <button class="scroll-right" aria-label="Scroll Right">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
+    
+    <!-- Dust effect -->
+    <img class="parallax__dust" src="img/dust.png" alt="Dust" />
+  </div>
+
+  <!-- Main content section -->
+  <main class="main-content">
+    <div class="wrapper">
+      <h2>WELCOME HEROES!</h2>
+      <h3>LEARN THE BASICS</h3>
+      <p>
+        There's a lot to learn about Overwatch, so we'll start with the essentials. Explore the guide below to get the rundown on the game.
+      </p>
+    </div>
+  </main>
+
+  <!-- Scrolling Text Section -->
+  <div class="scrolling-text-container">
+    <div class="scrolling-text">Welcome to Overwatch! Experience the thrill of team-based battles with unique heroes. Join the fight today!</div>
+  </div>
+
+  <!-- Choose Hero section -->
+  <section class="choose-hero">
+    <div class="wrapper">
+      <h2>CHOOSE YOUR HERO</h2>
+      <p>Overwatch 2 is about working with your team to complete the mission objectives in every match. With your hero's skills and abilities, you'll be on the path to Victory!</p>
+
+      <!-- Hero gallery -->
+      <div class="hero-gallery">
+        <!-- Hero cards -->
+        <div class="hero-card">
+          <img src="img/001.jpg" alt="Hero 1">
+          <h3>WIELD POWERFUL WEAPONS</h3>
+          <p>Each hero uses a signature weapon that is unique to them and their playstyle, ranging from upclose melee weapons and shotguns to long-range sniper rifles that can hit from a distance</p>
+        </div>
+        <div class="hero-card">
+          <img src="img/002.jpg" alt="Hero 2">
+          <h3>THREE ROLES TO SUPPORT THE TEAM</h3>
+          <p>Tank heroes fight to make space, Damage heroes work to secure eliminations, and Support heroes heal and enable everyone on the team. Which role will you choose?</p>
+        </div>
+        <div class="hero-card">
+          <img src="img/003.jpg" alt="Hero 3">
+          <h3>CHANGE THE GAME WITH ULTIMATE ABILITIES</h3>
+          <p>Raging dragons that soar through the map, a self-destructing mech that obliterates everything in sight, or an EMP burst that shuts down the opponents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Heroes section -->
+  <section class="meet-heroes">
+    <div class="wrapper">
+      <h2>MEET SOME OF</h2>
+      <h1>THE HEROES</h1>
+  
+      <!-- Hero details -->
+      <div class="hero-details" id="hero-details">
+        <div class="hero-detail-img"></div> <!-- Display the hero image -->
+        <h2>|Name|</h2> <!-- Display the hero name -->
+        <p class="subtext">|Class|</p> <!-- Display the hero subtitle -->
+        <p>|Description|</p> <!-- Display the hero description -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="footer-container">
+        <!-- Blizzard Logo -->
+        <div class="footer-logo">
+            <img src="img/blizz.png" alt="Blizzard Logo">
+        </div>
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <a href="https://x.com/PlayOverwatch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/PlayOverwatch/"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/playoverwatch/?hl=en"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.reddit.com/r/Overwatch/"><i class="fa-brands fa-square-reddit"></i></a>
+        </div>
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <a href="https://www.blizzard.com/en-gb/company/about">About Us</a>
+            <a href="https://www.blizzard.com/en-gb/company/contact">Contact</a>
+            <a href="https://www.blizzard.com/en-gb/legal/fba4d00f-c7e4-4883-b8b9-1b4500a402ea/blizzard-end-user-license-agreement">Terms of Service</a>
+            <a href="https://www.blizzard.com/en-gb/legal/8c41e7e6-0b61-42c4-a674-c91d8e8d68d3/blizzard-entertainment-privacy-policy">Privacy Policy</a>
+        </div>
+        <!-- Trademark Information -->
+        <div class="footer-trademark">
+            <p>© 2024 Blizzard Entertainment, Inc. All rights reserved. All trademarks referenced herein are the properties of their respective owners.</p>
+            <p>© All Copyright 2024 by Joshua Renzo P. Gofulco</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
