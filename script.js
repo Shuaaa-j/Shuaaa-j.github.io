@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const splashScreen = document.getElementById('splash-screen');
     const mainContent = document.getElementById('main-content');
-    const header = document.querySelector('#navbar');
+    const header = document.querySelector('header');
     const scrollSection = document.querySelector('.scroll-section');
     const bottomImage = document.getElementById('bottom-image');
     const leftArrow = document.getElementById('left-arrow');
@@ -12,10 +12,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const damageButton = document.getElementById('damage-button');
     const tankButton = document.getElementById('tank-button');
     const supportButton = document.getElementById('support-button');
+    const logo = document.querySelector('.logo');
+    const primaryNav = document.querySelector('.primary-nav');
 
+    // Show the logo and nav links after the splash screen disappears
     setTimeout(() => {
         splashScreen.classList.add('hidden');
         header.style.display = 'block'; // Show header after splash screen hides
+        logo.style.display = 'block'; // Show the logo
+        primaryNav.style.display = 'flex'; // Show the nav links
     }, 3000); // Display splash screen for 3 seconds
 
     setTimeout(() => {
@@ -60,17 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
         bottomImage.style.opacity = imageOpacity;
     }
 
-    window.addEventListener('scroll', function() {
-        const navbar = document.getElementById('navbar');
-        if (window.scrollY > 0) {
-            navbar.classList.add('solid');
-        } else {
-            navbar.classList.remove('solid');
-        }
-
-        fadeInImage();
-    });
-
     window.addEventListener('scroll', fadeInImage);
 
     function showCharacter(role) {
@@ -78,72 +72,35 @@ document.addEventListener("DOMContentLoaded", function() {
         let imageUrl;
         switch (role) {
             case 'damage':
-                imageUrl = 'damage.png';
+                imageUrl = 'img/damage.png';
                 break;
             case 'tank':
-                imageUrl = 'tank.jpg';
+                imageUrl = 'img/tank.jpg';
                 break;
             case 'support':
-                imageUrl = 'support.jpg';
+                imageUrl = 'img/support.jpg';
                 break;
             default:
-                imageUrl = 'damage.png';
+                imageUrl = 'img/damage.png';
         }
         characterImage.src = imageUrl;
     }
-
-    let isOverwatch = true;
-
-    const overwatchContent = {
-        title: "Overwatch",
-        description: "This is a short description of the Overwatch story. You can add more details about the storyline here.",
-        images: ["story1.jpg", "story2.jpg", "story3.jpg", "story4.jpg"],
-        background: "image99.png" // Add background image for Overwatch
-    };
-
-    const blackwatchContent = {
-        title: "Blackwatch",
-        description: "This is a short description of the Blackwatch story. You can add more details about the storyline here.",
-        images: ["b1.jpg", "b2.jpg", "b3.webp", "b4.webp"],
-        background: "b1.png" // Add background image for Blackwatch
-    };
-
-    function updateStoryContent(content) {
-        storyTitle.textContent = content.title;
-        storyDescription.textContent = content.description;
-        storyImages.innerHTML = content.images.map(src => `<img src="${src}" alt="${content.title} Image">`).join('');
-        // Update background based on content
-        const sectionWithImage = document.querySelector('.section-with-image');
-        sectionWithImage.style.backgroundImage = `url('${content.background}')`;
-    }
     
-    
-    leftArrow.addEventListener('click', function() {
-        isOverwatch = !isOverwatch;
-        updateStoryContent(isOverwatch ? overwatchContent : blackwatchContent);
-    });
-
-    rightArrow.addEventListener('click', function() {
-        isOverwatch = !isOverwatch;
-        updateStoryContent(isOverwatch ? overwatchContent : blackwatchContent);
-    });
-
     damageButton.addEventListener('click', function() {
         showCharacter('damage');
     });
-
+    
     tankButton.addEventListener('click', function() {
         showCharacter('tank');
     });
-
+    
     supportButton.addEventListener('click', function() {
         showCharacter('support');
     });
-
-    // Initially load Overwatch content
-    updateStoryContent(overwatchContent);
+    
 });
 
+// Users Joining Overwatch
 let userCountElement = document.getElementById('user-count');
 let userCount = 23315464;
 
@@ -155,6 +112,7 @@ setInterval(() => {
 let reviews = document.querySelectorAll('.review');
 let currentIndex = 0;
 
+// Buttons in the Reviews
 document.getElementById('prev-button').addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
@@ -169,6 +127,7 @@ document.getElementById('next-button').addEventListener('click', () => {
     }
 });
 
+// Highlight which Review
 function updateReviewHighlight() {
     reviews.forEach((review, index) => {
         if (index === currentIndex) {
@@ -182,5 +141,11 @@ function updateReviewHighlight() {
 // Initialize the first review as active
 reviews[currentIndex].classList.add('active');
 
+moreNewsButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    esportsSection.scrollIntoView({ behavior: 'smooth' });
+});
 
-
+document.getElementById('back-to-top-button').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
