@@ -1,58 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Information -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overwatch Characters</title>
-    <link rel="stylesheet" href="characters.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- JavaScript File for Characters -->
+    <script src="characters.js" defer></script>
+    <!-- Page Title -->
+    <title>OVERWATCH - CHARACTERS</title>
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/647e72c37a.js" crossorigin="anonymous"></script>
+    <!-- Main CSS File -->
+    <link href="characters.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Game</a></li>
-                <li><a href="#">Characters</a></li>
-                <li><a href="#">Story</a></li>
-                <li><a href="#">News</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="characters">
+    <!-- Parallax Container -->
+    <div class="parallax">
+        <!-- Primary Header -->
+        <header class="primary-header">
+            <div class="wrapper">
+                <div class="primary-header__inner">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="img/Logo.webp" alt="Logo" />
+                    </div>
+                    <!-- Navigation Bar -->
+                    <nav class="primary-nav">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="game.html">GAME</a></li>
+                            <li><a href="characters.html">CHARACTERS</a></li>
+                            <li><a href="cinematics.html">CINEMATICS</a></li>
+                            <li><a href="news.html">NEWS</a></li>
+                            <li><a href="https://us.shop.battle.net/en-us/product/overwatch">DOWNLOAD</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="wrapper">
+                <h1 class="hero__title">
+                    <span>Choose your</span> HEROES
+                </h1>
+                <button class="button">Scroll down!</button>
+            </div>
+        </div>
+
+        <!-- Parallax Images -->
+        <img class="parallax__bg" src="img/map.avif" alt="">
+        <img class="parallax__dust" src="img/dust.png" alt="">
+        <img class="parallax__foreground-back" src="img/ag.png" alt="">
+        <img class="parallax__foreground-front" src="img/pg1.png" alt="">
+        <img class="parallax__jax" src="img/rice1.png" alt="">
+        <img class="parallax__manny" src="img/rice2.png" alt="">
+        <img class="parallax__rays" src="img/png3.png" alt="">
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="wrapper">
+            <div class="section-container">
+                <!-- Overwatch Section -->
+                <div class="section overwatch">
+                    <img src="img/overwatch.avif" alt="Overwatch" class="section-img">
+                    <div class="section-content">
+                        <h2>Overwatch:</h2>
+                        <p>
+                            Overwatch is an esteemed
+                            organization dedicated to maintaining peace and stability.
+                        </p>
+                    </div>
+                </div>
+                <!-- Talon Section -->
+                <div class="section talon">
+                    <img src="img/talon-overwatch-header.avif" alt="Talon" class="section-img">
+                    <div class="section-content">
+                        <h2>:Talon</h2>
+                        <p>
+                            In stark contrast, Talon emerges as a malevolent force hell-bent on chaos and
+                            domination.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Characters Section -->
+    <section class="characters">
+        <div class="wrapper">
             <h1>Overwatch Characters</h1>
             <p>Explore the diverse characters of Overwatch.</p>
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn" data-category="all">All</button>
+                <button class="filter-btn" data-category="tank">Tank</button>
+                <button class="filter-btn" data-category="support">Support</button>
+                <button class="filter-btn" data-category="damage">Damage</button>
+            </div>
+            <!-- Character Display -->
             <div class="character-display">
                 <button id="prev-btn">←</button>
-                <div class="character-list">
-                    <!-- Character images will be dynamically added here -->
-                </div>
+                <div class="character-list"></div>
                 <button id="next-btn">→</button>
             </div>
+            <!-- Character Popup -->
             <div class="character-popup" id="character-popup">
                 <h2 id="popup-name"></h2>
                 <p id="popup-role"></p>
                 <p id="popup-description"></p>
                 <ul id="popup-abilities"></ul>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <div class="footer-content">
-            <img src="blizzard-logo.png" alt="Blizzard Logo">
-            <img src="overwatch-logo.png" alt="Overwatch Logo">
-            <ul class="social-media">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
-            </ul>
-            <ul class="footer-links">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/blizz.png" alt="Blizzard Logo">
+            </div>
+            <!-- Social Links -->
+            <div class="footer-social">
+                <a href="https://x.com/PlayOverwatch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/PlayOverwatch/"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/playoverwatch/?hl=en"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.reddit.com/r/Overwatch/"><i class="fa-brands fa-square-reddit"></i></a>
+            </div>
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="https://www.blizzard.com/en-gb/company/about">About Us</a>
+                <a href="https://www.blizzard.com/en-gb/company/contact">Contact</a>
+                <a href="https://www.blizzard.com/en-gb/legal/fba4d00f-c7e4-4883-b8b9-1b4500a402ea/blizzard-end-user-license-agreement">Terms of Service</a>
+                <a href="https://www.blizzard.com/en-gb/legal/8c41e7e6-0b61-42c4-a674-c91d8e8d68d3/blizzard-entertainment-privacy-policy">Privacy Policy</a>
+            </div>
+            <!-- Footer Trademark -->
+            <div class="footer-trademark">
+                <p>© 2024 Blizzard Entertainment, Inc. All rights reserved. All trademarks referenced herein are the properties of their respective owners.</p>
+                <p>© All Copyright 2024 by Joshua Renzo P. Gofulco</p>
+            </div>
         </div>
     </footer>
-    <script src="characters.js"></script>
+
 </body>
 </html>
