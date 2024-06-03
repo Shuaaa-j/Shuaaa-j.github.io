@@ -1,117 +1,519 @@
+/* Custom Cursor */
+/* Set a custom cursor for the entire HTML document */
+html {
+  cursor: url('cursors/cross.cur'), auto;
+}
+
+/* Parallax Container */
+/* Define the main parallax container with grid display */
+.parallax {
+  position: relative;
+  z-index: 0;
+  min-height: 75vh;
+  display: grid;
+  grid-template-areas: "stack";
+}
+
+/* Parallax Elements */
+/* Apply parallax animation to all child elements */
+.parallax > * {
+  grid-area: stack;
+  animation: parallax linear;
+  animation-timeline: scroll();
+  z-index: 2;
+}
+
+/* Parallax Images */
+/* Style for images within the parallax container */
+.parallax > img {
+  width: 100%;
+  z-index: 0;
+}
+
+/* Primary Header and Hero Section */
+/* Style for primary header and hero section with parallax speed */
+.primary-header,
+.hero {
+  --parallax-speed: 10;
+  z-index: 10;
+}
+
+/* Background Layer */
+/* Define the background layer with parallax speed */
+.parallax__bg {
+  --parallax-speed: -10;
+  z-index: 1;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Parallax Layers */
+/* Define additional parallax layers with different speeds and z-index */
+.parallax__dust {
+  --parallax-speed: -20;
+  z-index: 2;
+}
+
+.parallax__luna {
+  --parallax-speed: 10;
+  z-index: 3;
+}
+
+.parallax__manny {
+  --parallax-speed: 5;
+  z-index: 4;
+}
+
+.parallax__jax {
+  --parallax-speed: 5;
+  z-index: 5;
+}
+
+.parallax__rays {
+  --parallax-speed: -5;
+  z-index: 3;
+}
+
+/* Foreground Elements */
+/* Style for the foreground elements in the parallax */
+.parallax__foreground-front,
+.parallax__foreground-back {
+  z-index: 10;
+  align-self: end;
+}
+
+/* Transform properties for the back foreground element */
+.parallax__foreground-back {
+  transform: scaleY(1.2);
+  transform-origin: bottom;
+  mix-blend-mode: hard-light;
+}
+
+/* Main Content */
+/* Style for the main content section */
+.main-content {
+  position: relative;
+  z-index: 1;
+  background: #222;
+  padding-block: 6rem;
+}
+
+/* Parallax Animation */
+/* Define keyframes for the parallax animation */
+@keyframes parallax {
+  to {
+    transform: translateY(calc(var(--parallax-speed) * 100px));
+  }
+}
+
+/* General Styling */
+/* General styling for the HTML document */
+html {
+  color-scheme: dark;
+}
+
+/* Body Styling */
+/* Style for the body element */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  min-height: 300vh;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1em 0;
+/* Image Styling */
+/* Ensure images are displayed as block elements */
+img {
+  display: block;
+  max-width: 100%;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+/* Wrapper Styling */
+/* Style for the main content wrapper */
+.wrapper {
+  width: min(65rem, 100% - 4rem);
+  margin-inline: auto;
 }
 
-nav ul li {
-    margin: 0 1em;
+/* Flex Group */
+/* Style for elements with flex display and gap */
+.flex-group {
+  display: flex;
+  gap: 1rem;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+/* Button Styling */
+/* Style for buttons with custom appearance */
+.button {
+  font: inherit;
+  font-style: italic;
+  text-transform: uppercase;
+  background: #ffcc00;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 0.125em;
 }
 
+/* Primary Header */
+/* Style for the primary header */
+.primary-header {
+  padding-block: 2rem;
+}
+
+/* Primary Header Inner */
+/* Style for the inner content of the primary header */
+.primary-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+}
+
+/* Navigation Menu */
+/* Style for the navigation menu */
+.primary-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/* Navigation Menu Items */
+/* Style for individual navigation items */
+.primary-nav li {
+  margin-right: 20px;
+  z-index: 1000;
+}
+
+/* Navigation Links */
+/* Style for the navigation links */
+.primary-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+/* Navigation Links Hover */
+/* Style for the navigation links on hover */
+.primary-nav a:hover {
+  color: #ffcc00;
+  z-index: 1000;
+}
+
+/* Logo Styling */
+/* Style for the logo element */
+.logo {
+  max-width: 100px;
+  position: relative;
+}
+
+/* Logo Background Effect */
+/* Add background effect to the logo */
+.logo::after {
+  content: "";
+  position: absolute;
+  inset: -3rem;
+  z-index: -1;
+  background: radial-gradient(hsl(0 0% 100% / 0.5), transparent 70%);
+}
+
+/* Hero Section */
+/* Style for the hero section */
+.hero {
+  margin-block-start: max(20vh, 8rem);
+  --parallax-speed: 5;
+  z-index: 10;
+}
+
+/* Hero Title */
+/* Style for the hero title */
+.hero__title {
+  font-size: 6rem;
+  max-width: 10ch;
+  line-height: 1;
+  font-style: italic;
+  font-weight: 900;
+  position: relative;
+}
+
+/* Hero Title Span */
+/* Style for the span inside the hero title */
+.hero__title > span {
+  font-style: normal;
+  font-size: 0.5em;
+  display: block;
+}
+
+/* Hero Title Background Effect */
+/* Add background effect to the hero title */
+.hero__title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;
+  z-index: -1;
+  scale: 2;
+  opacity: 0.5;
+  filter: blur(5rem);
+  translate: -50%;
+}
+
+/* Characters Section */
+/* Style for the characters section */
 .characters {
-    text-align: center;
-    margin: 2em 0;
+  text-align: center;
+  margin: 2em 0;
 }
 
+/* Character Display */
+/* Style for the character display area */
 .character-display {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
 }
 
+/* Character List */
+/* Style for the character list container */
 .character-list {
-    display: flex;
-    overflow-x: auto;
-    gap: 1em;
-    padding: 1em;
-    scroll-behavior: smooth;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  gap: 1em;
+  padding: 1em;
+  max-width: 1500px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
+/* Character Images */
+/* Style for images within the character list */
 .character-list img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
 }
 
+/* Character Images Hover */
+/* Style for images on hover within the character list */
 .character-list img:hover {
-    filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
+/* Character Display Buttons */
+/* Style for buttons within the character display area */
 .character-display button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 1em;
-    cursor: pointer;
-    font-size: 1.5em;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5em;
+  cursor: pointer;
+  font-size: 1.5em;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  font-family: "Rubik", sans-serif;
 }
 
+/* Character Display Buttons Hover */
+/* Style for buttons on hover within the character display area */
 .character-display button:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
+/* Character Popup */
+/* Style for the character popup */
 .character-popup {
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #333;
-    padding: 1em;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    z-index: 10;
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #333;
+  padding: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 100;
+  color: black;
 }
 
+/* Character Popup Content */
+/* Style for the content inside the character popup */
+.character-popup h2,
+.character-popup p,
+.character-popup ul {
+  font-size: 14px;
+}
+
+/* Filter Buttons */
+/* Style for the filter buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+/* Filter Button */
+/* Style for individual filter buttons */
+.filter-btn {
+  font-size: 19px;
+  padding: 1em 2em;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Filter Button Hover */
+/* Style for filter buttons on hover */
+.filter-btn:hover {
+  background-color: #ff9900;
+}
+
+/* Section Containers */
+/* Style for the section container */
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Individual Sections */
+/* Style for individual sections */
+.section {
+  display: flex;
+  flex-direction: row;
+  width: 48%;
+  gap: 1rem;
+}
+
+/* Overwatch Section */
+/* Style for the Overwatch section */
+.section.overwatch {
+  text-align: left;
+}
+
+/* Talon Section */
+/* Style for the Talon section */
+.section.talon {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+/* Section Images */
+/* Style for images within the sections */
+.section-img {
+  width: 40%;
+  object-fit: cover;
+}
+
+/* Section Content */
+/* Style for content within the sections */
+.section-content {
+  width: 60%;
+}
+
+/* Paragraphs in Section Content */
+/* Style for paragraphs within section content */
+.section-content p {
+  font-size: 18px;
+}
+
+/* Footer Section */
+/* Style for the footer section */
 footer {
-    background-color: #f1f1f1;
-    padding: 1em 0;
-    text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Footer Container */
+/* Style for the container within the footer */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.footer-content img {
-    margin: 1em 0;
+/* Footer Logo */
+/* Style for the logo within the footer */
+.footer-logo img {
+  width: 100px;
+  margin: 0 10px;
 }
 
-.social-media,
+/* Footer Social Links */
+/* Style for social links within the footer */
+.footer-social a {
+  margin: 0 10px;
+}
+
+/* Footer Social Icons */
+/* Style for social icons within the footer */
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Footer Links */
+/* Style for links within the footer */
 .footer-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 1em 0;
-    display: flex;
-    gap: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.social-media a,
+/* Individual Footer Links */
+/* Style for individual links within the footer */
 .footer-links a {
-    color: #333;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+/* Footer Links Hover */
+/* Style for footer links on hover */
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Trademark */
+/* Style for the trademark text within the footer */
+.footer-trademark {
+  font-size: 0.8em;
+}
+
+/* Footer Paragraph */
+/* Style for paragraphs within the footer */
+.footer-p {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+/* Font Awesome Icons */
+/* Style for Font Awesome icons within the footer social links */
+.footer-social a .fa-brands,
+.footer-social a .fab {
+  color: white;
 }
