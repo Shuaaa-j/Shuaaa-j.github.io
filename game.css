@@ -1,0 +1,495 @@
+/* Setting custom cursor */
+html {
+  cursor: url('cursors/cross.cur'), auto;
+}
+
+/* Parallax effect container */
+.parallax {
+  position: relative;
+  z-index: 0;
+  min-height: 75vh;
+  display: grid;
+  grid-template-areas: "stack";
+}
+
+.parallax > * {
+  grid-area: stack;
+}
+
+/* Background image container for draggable effect */
+.draggable-bg {
+  display: flex;
+  overflow: hidden;
+}
+
+/* Styling for images inside draggable background */
+.draggable-bg img {
+  min-width: 100%;
+}
+
+/* Button for scrolling right */
+.scroll-right {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: hsl(21, 68%, 49%);
+  color: white;
+  border: none;
+  padding: 1em 2em;
+  cursor: pointer;
+  z-index: 999999999999999999;
+}
+
+/* Styling for primary header and hero sections */
+.primary-header,
+.hero {
+  z-index: 1000;
+}
+
+/* Dust effect in parallax */
+.parallax__dust {
+  --parallax-speed: -20;
+  z-index: 2;
+}
+
+/* Main content section */
+.main-content {
+  position: relative;
+  background: #222;
+  padding-block: 6rem;
+}
+
+/* Dark color scheme for HTML */
+html {
+  color-scheme: dark;
+}
+
+/* Body styling */
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  min-height: 300vh;
+}
+
+/* Image styling */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Wrapper element styling */
+.wrapper {
+  width: min(65rem, 100% - 4rem);
+  margin-inline: auto;
+}
+
+/* Flex group styling */
+.flex-group {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button styling */
+.button {
+  font: inherit;
+  font-style: italic;
+  text-transform: uppercase;
+  background: hsl(21, 68%, 49%);
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 0.125em;
+}
+
+/* Primary header styling */
+.primary-header {
+  padding-block: 2rem;
+}
+
+/* Inner container of primary header */
+.primary-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+}
+
+/* Primary navigation styling */
+.primary-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.primary-nav li {
+  margin-right: 20px;
+  z-index: 1000;
+}
+
+.primary-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.primary-nav a:hover {
+  color: #ffcc00;
+  z-index: 1000;
+}
+
+/* Logo styling */
+.logo {
+  max-width: 100px;
+  position: relative;
+}
+
+/* Hero section styling */
+.hero {
+  margin-block-start: max(20vh, 8rem);
+}
+
+/* Title styling inside hero section */
+.hero__title {
+  font-size: 5rem;
+  max-width: 10ch;
+  line-height: 1;
+  font-style: italic;
+  font-weight: 900;
+  position: relative;
+  text-shadow: 2px 2px 5px #808080;
+}
+
+.hero__title > span {
+  font-style: normal;
+  font-size: 0.5em;
+  display: block;
+}
+
+.hero__title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;
+  z-index: -1;
+  scale: 2;
+  opacity: 0.5;
+  filter: blur(5rem);
+  translate: -50%;
+}
+
+/* Popup styling */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.popup p {
+  margin-bottom: 0;
+  color:black;
+}
+
+/* Subtext styling */
+.subtext {
+  font-size: 32px !important;
+  color: #ffcc00 !important;
+}
+
+.subsubtext {
+  font-size: 24px !important;
+}
+
+/* Circular button for scrolling right */
+.scroll-right {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-right svg {
+  width: 60%;
+  height: 60%;
+  stroke: currentColor;
+}
+
+/* Heading 2 styling in main content */
+.main-content h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: white;
+}
+
+/* Heading 3 styling in main content */
+.main-content h3 {
+  font-size: 4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ffcc00;
+}
+
+/* Paragraph styling in main content */
+.main-content p {
+  font-size: 1.25rem;
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Container for scrolling text */
+.scrolling-text-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #444;
+  padding: 1rem 0;
+}
+
+/* Styling for scrolling text */
+.scrolling-text {
+  display: inline-block;
+  animation: scrollText 10s linear infinite;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: italic;
+  padding: 0 2rem;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Styling for choose hero section */
+.choose-hero {
+  text-align: center;
+  padding: 4rem;
+  background-image: url('img/bac.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.choose-hero h2 {
+  font-size: 32px;
+  margin-bottom: 1.5rem;
+}
+
+.choose-hero p {
+  font-size: 24px;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+/* Gallery of hero cards */
+.hero-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Individual hero card */
+.hero-card {
+  width: 250px;
+  text-align: center;
+  margin: 0.5rem;
+  background: #444;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image inside hero card */
+.hero-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  margin: 0 auto;
+}
+
+/* Heading 3 inside hero card */
+.hero-card h3 {
+  margin-top: 0.5rem;
+  font-size: 18px;
+}
+
+/* Paragraph inside hero card */
+.hero-card p {
+  font-size: 15px;
+  color: #777;
+}
+
+/* Details of hero section */
+.hero-details {
+  text-align: center;
+}
+
+/* Image inside hero details */
+.hero-detail-img {
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;  
+  margin: 0 auto 1.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect on hero detail image */
+.hero-detail-img:hover {
+  opacity: 1;
+}
+
+.me
+
+/* Heading 2 in hero details */
+.hero-details h2 {
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph in hero details */
+.hero-details p {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+/* Subtext styling */
+.subtext {
+  font-size: 24px;
+  color: #777;
+}
+
+/* Footer section styling */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Container for footer */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo in footer */
+.footer-logo img {
+  width: 100px;
+  margin: 0 10px;
+}
+
+/* Social media links in footer */
+.footer-social a {
+  margin: 0 10px;
+}
+
+/* Social media icons in footer */
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Links in footer */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Trademark information in footer */
+.footer-trademark {
+  font-size: 0.8em;
+}
+
+.footer-trademark p {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  margin-bottom: -8px;
+}
+
+/* Adjusting font size for first span within hero title */
+.hero__title > span:first-child {
+  font-size: 80px;
+}
+
+/* Styling for social media icons in footer */
+.footer-social a .fa-brands,
+.footer-social a .fab {
+  color: white;
+}
+
+.meet-heroes {
+  text-align: center;
+  padding: 4rem;
+  background-color: #222; /* Set background color */
+  color: white; /* Set text color */
+}
+
+.meet-heroes .wrapper {
+  width: min(65rem, 100% - 4rem); /* Set maximum width for content */
+  margin-inline: auto; /* Center align content */
+}
+
+.meet-heroes h2 {
+  font-size: 2.5rem; /* Set font size for the secondary heading */
+  margin-bottom: 1.5rem; /* Add bottom margin to separate from primary heading */
+}
+
+.meet-heroes h1 {
+  font-size: 4rem; /* Set font size for the primary heading */
+  margin-bottom: 3rem; /* Add bottom margin to create space */
+}
