@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentIndex++;
     };
   
-    // Update hero details every 5 seconds
+    // Update hero details every 2 seconds
     setInterval(updateHeroDetails, 2000);
   });
   
