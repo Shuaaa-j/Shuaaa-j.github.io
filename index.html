@@ -3,76 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overwatch</title>
+    <title>OVERWATCH - HOME</title>
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/647e72c37a.js" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <header id="navbar">
+    <!-- Header Section -->
+    <header>
         <div class="container">
-            <a href="#" class="logo"><img src="logo.png" alt="Your Logo"></a>
-            <nav>
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <nav class="primary-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="game.html">Game</a></li>
-                    <li><a href="characters.html">Characters</a></li>
-                    <li><a href="#">Story</a></li>
-                    <li><a href="#">News</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="game.html">GAME</a></li>
+                    <li><a href="characters.html">CHARACTERS</a></li>
+                    <li><a href="cinematics.html">CINEMATICS</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="https://us.shop.battle.net/en-us/product/overwatch">DOWNLOAD</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
+    <!-- Splash Screen -->
     <div class="splash-screen" id="splash-screen">Blizzard Entertainment</div>
+    
+    <!-- Main Content with Video Background -->
     <div class="full-page" id="main-content">
-        <video autoplay muted loop class="video-background">
-            <source src="video2.mp4" type="video/mp4">
+        <video autoplay muted loop class="video-background"> 
+            <source src="img/video2.mp4" type="video/mp4">
         </video>
         <div id="animated-text"></div>
     </div>
+    
+    <!-- Overview Section -->
     <div class="scroll-section">
         <div class="image-overlay">
-            <h1>What is Overwatch?</h1>
-            <p>Overwatch was released in 2016, and Overwatch 2 was released in 2022. Both games feature hero-based combat between two teams of players vying over various objectives, along with other traditional gameplay modes. Released in 2016, the first video game in the series lacked a traditional story mode.</p>
+            <h1>Overview</h1>
+            <p>"Welcome to the adrenaline-fueled world of Overwatch, where heroes clash in a symphony of chaos and strategy. <br> <br>Join the ranks, unleash your inner hero, and rewrite the course of history. Are you ready to answer the call?"</p>
         </div>
-        <img id="bottom-image" src="map.png" alt="Bottom Image">
+        <img id="bottom-image" src="img/map.png" alt="Bottom Image">
     </div>
-   <!-- Filler Section -->
-   <div class="new-section">
-    <div class="container">
-        <h2 class="section-heading">UNLEASH YOUR INNER POTENTIAL</h2>
-        <h3 class="section-subheading">Join forces with allies, strategize, and experience the thrilling new content in Overwatch</h3>
-        <div class="image-grid">
-            <div class="image-item">
-                <img src="filler1.jpg" alt="Image 1">
-                <div class="image-text">
-                    <h3>Hero-based Gameplay</h3>
-                    <p>Features a diverse roster of heroes, each with unique abilities, classified into Damage, Tank, and Support roles.</p>
+   
+    <!-- Filler Section -->
+    <div class="filler-section">
+        <div class="container">
+            <h2 class="section-heading">UNLEASH YOUR INNER POTENTIAL</h2>
+            <h3 class="section-subheading">Join forces with allies, strategize, and experience the thrilling new content in Overwatch</h3>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="img/filler1.jpg" alt="Image 1">
+                    <div class="image-text">
+                        <h3>Hero-based Gameplay</h3>
+                        <p>Features a diverse roster of heroes, each with unique abilities, classified into Damage, Tank, and Support roles.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="image-item">
-                <img src="filler2.jpg" alt="Image 2">
-                <div class="image-text">
-                    <h3>Team-oriented Objectives</h3>
-                    <p>Emphasizes cooperation to complete objectives like capturing points or escorting payloads.</p>
+                <div class="image-item">
+                    <img src="img/filler2.jpg" alt="Image 2">
+                    <div class="image-text">
+                        <h3>Team-oriented Objectives</h3>
+                        <p>Emphasizes cooperation to complete objectives like capturing points or escorting payloads.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="image-item">
-                <img src="OW2_Dorado_3.webp" alt="Image 3">
-                <div class="image-text">
-                    <h3>Dynamic Maps</h3>
-                    <p>Offers a variety of global locations with unique layouts, encouraging different strategies and hero choices.</p>
+                <div class="image-item">
+                    <img src="img/OW2_Dorado_3.webp" alt="Image 3">
+                    <div class="image-text">
+                        <h3>Dynamic Maps</h3>
+                        <p>Offers a variety of global locations with unique layouts, encouraging different strategies and hero choices.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="image-item">
-                <img src="overwatch1.jpg" alt="Image 4">
-                <div class="image-text">
-                    <h3>Stylized Art and Storytelling</h3>
-                    <p>Known for its vibrant art style and engaging lore explored through animated shorts and comics.</p>
+                <div class="image-item">
+                    <img src="img/overwatch1.jpg" alt="Image 4">
+                    <div class="image-text">
+                        <h3>Stylized Art and Storytelling</h3>
+                        <p>Known for its vibrant art style and engaging lore explored through animated shorts and comics.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Characters Section -->
     <div class="characters-section">
@@ -89,77 +110,40 @@
                 </div>                
             </div>
             <div class="image-content">
-                <img id="character-image" src="damage.png" alt="Character Image">
+                <img id="character-image" src="img/damage.png" alt="Character Image">
             </div>
         </div>
     </div>
-    
-<div class="diagonal-container">
-    <div class="video-wrapper">
-        <video autoplay loop muted>
-            <source src="video1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="diagonal-divider"></div>
-    <div class="video-wrapper">
-        <video autoplay loop muted>
-            <source src="video2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
 
-
-    <!-- Story Section-->
-    <div class="section-with-image" style="background-image: url('image41.png');">
-        <div class="section-content">
-            <h2>Story</h2>
-            <div class="subheading">
-                <h3 id="story-title">Overwatch</h3>
-                <div class="arrows">
-                    <span id="left-arrow">&#9664;</span>
-                    <span id="right-arrow">&#9654;</span>
-                </div>
-            </div>
-            <p id="story-description">This is a short description of the Overwatch story. You can add more details about the storyline here.</p>
-            <div class="story-images" id="story-images">
-                <img src="story1.jpg" alt="Story Image 1">
-                <img src="story2.jpg" alt="Story Image 2">
-                <img src="story3.jpg" alt="Story Image 3">
-                <img src="story4.jpg" alt="Story Image 4">
-            </div>
-        </div>
-    </div>
     <!-- News Section -->
     <div class="news-section">
         <div class="container">
-            <h2 class="featured-news-heading">Featured News</h2>
+            <h2 class="featured-news-heading">Featured|  News|</h2>
             <div class="news-grid">
                 <div class="news-item">
-                    <a href="link1.html">
-                        <img src="image31.webp" alt="News Image 1">
+                    <a href="https://overwatch.blizzard.com/en-gb/news/24072111/overwatch-2-porsche-an-electric-collaboration/">
+                        <img src="img/image31.webp" alt="News Image 1">
                         <div class="news-info">
-                            <h3>News Title 1</h3>
-                            <p>Subheading or summary for news item 1</p>
+                            <h3>Porsche: An Electric Collaboration</h3>
+                            <p>"Overwatch and Porsche join forces to electrify the gaming world with innovative collaborations and cutting-edge experiences."</p>
                         </div>
                     </a>
                 </div>
                 <div class="news-item">
-                    <a href="link2.html">
-                        <img src="image32.png" alt="News Image 2">
+                    <a href="https://overwatch.blizzard.com/en-gb/news/24077475/discover-a-world-turned-over-the-mirrorwatch-event-begins-today/">
+                        <img src="img/image32.png" alt="News Image 2">
                         <div class="news-info">
-                            <h3>News Title 2</h3>
-                            <p>Subheading or summary for news item 2</p>
+                            <h3>Discover A World Turned Over: Mirrorwatch</h3>
+                            <p>"Where familiar heroes and landscapes take on a thrilling new perspective in Overwatch."</p>
                         </div>
                     </a>
                 </div>
                 <div class="news-item">
-                    <a href="link3.html">
-                        <img src="image33.png" alt="News Image 3">
+                    <a href="https://overwatch.blizzard.com/en-gb/news/24072110/director-s-take-empowering-tanks-in-midseason/">
+                        <img src="img/image33.png" alt="News Image 3">
                         <div class="news-info">
-                            <h3>News Title 3</h3>
-                            <p>Subheading or summary for news item 3</p>
+                            <h3>Director's Take - Empowering Tanks</h3>
+                            <p>"Redefining frontline strategies and unleashing new gameplay dynamics in Overwatch."</p>
                         </div>
                     </a>
                 </div>
@@ -167,31 +151,32 @@
         </div>
     </div>
     
+    <!-- Reviews Section -->
     <section id="reviews">
         <h2>Game Review</h2>
         <p id="user-count">23,315,464+ Users Playing Overwatch</p>
         <div class="review-slider">
             <div class="review-container">
                 <div class="review active" id="review1">
-                    <img src="logo1.png" alt="Gamer Logo">
+                    <img src="img/pfp1.jpg" alt="Gamer Logo">
                     <div class="review-content">
-                        <h3 class="gamer-name">Gamer Name 1</h3>
-                        <p class="occupation">YouTube</p>
+                        <h3 class="gamer-name">Necros</h3>
+                        <p class="occupation">YouTuber</p>
                         <p class="description">Overwatch is an amazing game with dynamic gameplay and stunning graphics. I love streaming it!</p>
                     </div>
                 </div>
                 <div class="review" id="review2">
-                    <img src="logo2.png" alt="Gamer Logo">
+                    <img src="img/pfp2.jpg" alt="Gamer Logo">
                     <div class="review-content">
-                        <h3 class="gamer-name">Gamer Name 2</h3>
+                        <h3 class="gamer-name">Jay3</h3>
                         <p class="occupation">Twitch Streamer</p>
                         <p class="description">The community and the competitive nature of Overwatch make it a must-play for any serious gamer.</p>
                     </div>
                 </div>
                 <div class="review" id="review3">
-                    <img src="logo3.png" alt="Gamer Logo">
+                    <img src="img/pfp3.jpg" alt="Gamer Logo">
                     <div class="review-content">
-                        <h3 class="gamer-name">Gamer Name 3</h3>
+                        <h3 class="gamer-name">Seagull</h3>
                         <p class="occupation">Professional Gamer</p>
                         <p class="description">Overwatch has been a staple in the eSports scene for years. It's challenging and rewarding.</p>
                     </div>
@@ -204,28 +189,32 @@
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="blizz.png" alt="Blizzard Logo">
+                <img src="img/blizz.png" alt="Blizzard Logo">
             </div>
             <div class="footer-social">
-                <a href="https://www.instagram.com/blizzard/?hl=en" target="_blank"><img src=".png" alt="Instagram"></a>
-                <a href="https://twitter.com/blizzard_ent" target="_blank"><img src=".png" alt="Twitter"></a>
-                <!-- Add more social links here -->
+                <a href="https://x.com/PlayOverwatch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/PlayOverwatch/"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/playoverwatch/?hl=en"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.reddit.com/r/Overwatch/"><i class="fa-brands fa-square-reddit"></i></a>
             </div>
             <div class="footer-links">
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Privacy Policy</a>
+                <a href="https://www.blizzard.com/en-gb/company/about">About Us</a>
+                <a href="https://www.blizzard.com/en-gb/company/contact">Contact</a>
+                <a href="https://www.blizzard.com/en-gb/legal/fba4d00f-c7e4-4883-b8b9-1b4500a402ea/blizzard-end-user-license-agreement">Terms of Service</a>
+                <a href="https://www.blizzard.com/en-gb/legal/8c41e7e6-0b61-42c4-a674-c91d8e8d68d3/blizzard-entertainment-privacy-policy">Privacy Policy</a>
             </div>
             <div class="footer-trademark">
                 <p>© 2024 Blizzard Entertainment, Inc. All rights reserved. All trademarks referenced herein are the properties of their respective owners.</p>
+                <p>© All Copyright 2024 by Joshua Renzo P. Gofulco</p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="script.js" defer></script>
 </body>
 </html>
