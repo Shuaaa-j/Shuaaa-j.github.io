@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVERWATCH - CHARACTERS</title>
+    <link rel="stylesheet" href="cinematics.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/647e72c37a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>    
+              <!-- Navigation Bar -->
+              <nav class="primary-nav">
+                <ul>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="game.html">GAME</a></li>
+                  <li><a href="characters.html">CHARACTERS</a></li>
+                  <li><a href="cinematics.html">CINEMATICS</a></li>
+                  <li><a href="news.html">NEWS</a></li>
+                  <li><a href="https://us.shop.battle.net/en-us/product/overwatch">DOWNLOAD</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+    <!-- Vertical Sliders -->
+    <div class="container">
+        <div class="slider-container">
+            <div class="slider" onclick="changeContent(1)" style="background-image: url('img/01.jpg');">
+                <span class="number">01</span> <span class="video-name">Dragons</span>
+            </div>
+            <div class="slider" onclick="changeContent(2)" style="background-image: url('img/02.jpg');">
+                <span class="number">02</span> <span class="video-name">Reunion</span>
+            </div>
+            <div class="slider" onclick="changeContent(3)" style="background-image: url('img/03.jpg');">
+                <span class="number">03</span> <span class="video-name">Honor & Glory</span>
+            </div>
+            <div class="slider" onclick="changeContent(4)" style="background-image: url('img/04.jpg');">
+                <span class="number">04</span> <span class="video-name">Hero</span>
+            </div>
+            <div class="slider" onclick="changeContent(5)" style="background-image: url('img/05.jpg');">
+                <span class="number">05</span> <span class="video-name">Infiltration</span>
+            </div>
+            <div class="slider" onclick="changeContent(6)" style="background-image: url('img/06.jpg');">
+                <span class="number">06</span> <span class="video-name">Kiriko</span>
+            </div>
+            <div class="slider" onclick="changeContent(7)" style="background-image: url('img/07.jpg');">
+                <span class="number">07</span> <span class="video-name">Calling</span>
+            </div>
+            <div class="slider" onclick="changeContent(8)" style="background-image: url('img/08.jpg');">
+                <span class="number">08</span> <span class="video-name">Wastelander</span>
+            </div>
+            <div class="slider" onclick="changeContent(9)" style="background-image: url('img/09.jpg');">
+                <span class="number">09</span> <span class="video-name">A Great Day</span>
+            </div>
+            <div class="slider" onclick="changeContent(10)" style="background-image: url('img/10.jpg');">
+                <span class="number">10</span> <span class="video-name">Doomfist</span>
+            </div>
+        </div>
+        <div class="content">
+            <div id="videoContainer"></div>
+            <button id="closeButton" onclick="closeFullscreen()">X</button>
+        </div>  
+    </div>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/blizz.png" alt="Blizzard Logo">
+            </div>
+            <!-- Footer Section Socials -->
+            <div class="footer-social">
+                <a href="https://x.com/PlayOverwatch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/PlayOverwatch/"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/playoverwatch/?hl=en"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.reddit.com/r/Overwatch/"><i class="fa-brands fa-square-reddit"></i></a>
+            </div>
+            <!-- Footer Section Blizzard Policy Links -->
+            <div class="footer-links">
+                <a href="https://www.blizzard.com/en-gb/company/about">About Us</a>
+                <a href="https://www.blizzard.com/en-gb/company/contact">Contact</a>
+                <a href="https://www.blizzard.com/en-gb/legal/fba4d00f-c7e4-4883-b8b9-1b4500a402ea/blizzard-end-user-license-agreement">Terms of Service</a>
+                <a href="https://www.blizzard.com/en-gb/legal/8c41e7e6-0b61-42c4-a674-c91d8e8d68d3/blizzard-entertainment-privacy-policy">Privacy Policy</a>
+            </div>
+            <div class="footer-trademark">
+                <p>© 2024 Blizzard Entertainment, Inc. All rights reserved. All trademarks referenced herein are the properties of their respective owners.</p>
+                <p>© All Copyright 2024 by Joshua Renzo P. Gofulco</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="cinematics.js"></script>
+</body>
+</html>
